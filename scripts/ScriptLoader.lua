@@ -64,12 +64,14 @@ function loadScript(pid, key, index)
 		end
 		
 		print("Loaded script \""..key.."\".")
+		return true
 	else
 		if pid then
 			tes3mp.SendMessage(pid, "Could not load script with the name of \""..key.."\".\n", false)
 		end
 		print("Could not load script with the name of \""..key.."\".")
 		print(err)
+		return false
 	end
 	
 end
@@ -109,7 +111,10 @@ Methods.OnPlayerSendCommand = function(pid, cmd, message)
 	
 	if admin and cmd[1] == "loadscript" then
 		if cmd[2] then
-			loadScript(cmd[2])
+			if loadScript(cmd[2]) then
+				info[#info+1] = cmd[2]
+				saveScriptFile()
+			end
 		else
 			tes3mp.SendMessage(pid, "Expected script name in argument #1.\n",false)
 		end
