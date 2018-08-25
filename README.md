@@ -5,6 +5,8 @@ If your server is already online and you want to load up a script you just made/
 
 # Install Guide
 
+OPTIONAL VIDEO GUIDE: https://www.youtube.com/watch?v=z7UqCArErnU
+
 **1.)** Take **server.lua, ScriptLoader.Lua, and DefaultCommands.lua** drop them into your **mpstuff/scripts/** folder *replacing* the old server.lua.
 
 **2.)** Take **scripts.json** from the data folder in this github, drop it into your **mpstuff/data/** folder.
