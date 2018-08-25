@@ -88,8 +88,8 @@ Methods.Init = function()
 	end
 	
 	for index = 1, #registered do
-		if registered[index][USES_POST_INIT][1] then
-			registered[index][USES_POST_INIT].Func()
+		if registered[index][USES_INIT][1] then
+			registered[index][USES_INIT].Func()
 		end
 	end
 end
