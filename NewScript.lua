@@ -290,3 +290,5 @@ Methods[USES_MPNUM_INCREMENT].Func = function(currentMpNum)
 
 
 end
+
+return Methods
