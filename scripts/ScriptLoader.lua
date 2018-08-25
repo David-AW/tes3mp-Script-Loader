@@ -435,7 +435,7 @@ end
 Methods.OnGUIAction = function(pid, idGui, data)
 	for index = 1, #registered do
 		if registered[index][USES_GUI_ACTION][1] then
-			registered[index][USES_GUI_ACTION].Func(pid, idGui, data)
+			return registered[index][USES_GUI_ACTION].Func(pid, idGui, data)
 		end
 	end
 end
