@@ -22,8 +22,7 @@ end
 -- ::::CHAT METHODS::::
 -- ********************
 
--- DO_NOTHING skips this script and moves to the next.
--- COMMAND_EXECUTED skips all future scripts (Because command was executed)
+-- HIDE_DEFAULT_CHAT is used to stop the message from showing up in the chat box (Overwriting default chat behavior)
 
 Methods[USES_MESSAGE][1] = true
 Methods[USES_MESSAGE].Func = function(pid, message) -- On player sent message
@@ -32,7 +31,8 @@ Methods[USES_MESSAGE].Func = function(pid, message) -- On player sent message
 	return DO_NOTHING
 end
 
--- HIDE_DEFAULT_CHAT is used to stop the message from showing up in the chat box (Overwriting default chat behavior)
+-- DO_NOTHING skips this script and moves to the next.
+-- COMMAND_EXECUTED skips all future scripts (Because command was executed)
 
 Methods[USES_COMMAND][1] = true
 Methods[USES_COMMAND].Func = function(pid, isAdmin, isModerator, cmd, message) -- On player sent command (parameter "cmd" is a table)
@@ -53,6 +53,12 @@ end
 
 Methods[USES_PLAYER_DISCONNECT][1] = true
 Methods[USES_PLAYER_DISCONNECT].Func = function(pid) -- Called when a player leaves the server
+
+
+end
+
+Methods[USES_PLAYER_CELL_CHANGE][1] = true
+Methods[USES_PLAYER_CELL_CHANGE].Func = function(pid) -- Called when a player changes cells
 
 
 end
