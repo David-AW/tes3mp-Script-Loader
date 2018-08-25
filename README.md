@@ -25,8 +25,8 @@ for example multiple scripts:
 ```
 {
 	"DefaultCommands",
-  "Foo",
-  "Bar"
+	"Foo",
+  	"Bar"
 }
 ```
 
@@ -39,7 +39,7 @@ for example multiple scripts:
 
 # Developing With "ScriptLoader"
 
-Start with a fresh script template from this repository. Download NewScript.lua and then start developing. It has all the functions you need from server.lua there ready to use.
+Start with a fresh script template from this repository. Download **NewScript.lua** and then start developing. It has all the functions you need from server.lua there ready to use.
 
 *If you dont need a function just delete it!!*
 
